@@ -32,6 +32,15 @@ body {
   font-size: 18px;
 }
 
+nav {
+  margin: 0 auto;
+  width: 90%;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
 .nav-item {
   text-transform: uppercase;
   padding: 1rem;
@@ -83,6 +92,11 @@ body {
   margin-top: 5rem;
 }
 
+.bookmark-row .bookmark-text button {
+  background: #5368df;
+  padding: 1rem 2rem;
+}
+
 .bookmark-row .bookmark-img {
   margin-top: 4rem;
   margin-bottom: 6rem;
@@ -108,14 +122,15 @@ body {
   background: #5368df;
   border-top-right-radius: 7rem;
   border-bottom-right-radius: 7rem;
-  padding: 12vw 19vw;
+  padding: 25% 39%;
   z-index: 0;
 }
 
 .bookmark-row .bookmark-img .illustration-features-tab-1, .bookmark-row .bookmark-img .illustration-features-tab-2 {
   position: relative;
+  left: 6%;
   z-index: 10;
-  width: 85%;
+  width: 80%;
 }
 
 .simple-bookmark-text {
@@ -155,17 +170,19 @@ body {
 }
 
 .simple-bookmark-svg {
+  text-align: center;
   padding-top: 5rem;
+  position: relative;
 }
 
 .round-background {
-  margin-top: 7rem;
+  margin-top: 5rem;
   position: absolute;
   z-index: 10;
   right: 0;
   border-top-left-radius: 7rem;
   border-bottom-left-radius: 7rem;
-  padding: 9vw 20vw;
+  padding: 21% 40%;
   background: #5368df;
 }
 
@@ -410,6 +427,15 @@ footer .attribution {
 }
 
 @media screen and (max-width: 1024px) {
+  .simple-bookmark-text {
+    padding: 2.5rem;
+  }
+  .round-background {
+    margin-top: 3.5rem;
+  }
+  .simple-bookmark-svg svg {
+    width: 60%;
+  }
   .tile button {
     font-size: 70%;
   }
