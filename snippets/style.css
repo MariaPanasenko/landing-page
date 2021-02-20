@@ -12,7 +12,12 @@ a {
 }
 
 a:hover {
+  color: #fa5757 !important;
   text-decoration: none !important;
+}
+
+li {
+  list-style-type: none;
 }
 
 h2, p {
@@ -76,11 +81,11 @@ section:last-of-type {
   padding: 1rem;
 }
 
-.nav-link {
-  color: #252b46 !important;
+.nav-item:hover {
+  color: #fa5757 !important;
 }
 
-.nav-link:hover {
+#hover0:hover, #hover1:hover, #hover2:hover {
   color: #fa5757 !important;
 }
 
@@ -387,6 +392,19 @@ input::-webkit-input-placeholder {
 
 footer {
   background: #252b46;
+}
+
+.footer-logo .white-text {
+  fill: #fff;
+}
+
+.ul-footer li {
+  margin: 0 3rem;
+}
+
+.ul-footer li a {
+  color: #fff;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1024px) {

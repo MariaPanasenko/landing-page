@@ -13,10 +13,15 @@ $VeryDarkBlue: hsl(229, 31%, 21%);
 a{
     cursor: pointer;
     text-decoration: none;
+    
    
     &:hover{
+        color:$SoftRed !important;
         text-decoration: none !important;
     }
+}
+li{
+    list-style-type: none;
 }
 h2, p{
     text-align: left;
@@ -65,14 +70,12 @@ section{
 .nav-item{
     text-transform: uppercase;
     padding: 1rem;
-    
-   
-}
-.nav-link{
-    color:$VeryDarkBlue !important;
     &:hover{
         color: $SoftRed !important;
-    }
+    }  
+}
+#hover0:hover,#hover1:hover,#hover2:hover{
+    color: $SoftRed !important;
 }
 .nav-btn{
     font-weight: 500;
@@ -197,9 +200,7 @@ section{
     }
 }
 #back{
-    // border-top-right-radius: 2rem;
     width:370px;
-    // width:365px;
 }
 // Extentions section
 .extention-row{
@@ -242,7 +243,7 @@ section{
     }
 }
 // End of extention section
-// FAQ
+// FAQ section
 // Arrow-movement
 .panel-heading [data-toggle="collapse"].collapsed:after {
     /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
@@ -337,9 +338,21 @@ input{
 footer{
     background:$VeryDarkBlue;
 }
-
-
-// End of footer section
+.footer-logo{
+    .white-text{
+    fill:#fff;
+    }
+}
+.ul-footer{
+    li{
+        margin:0 3rem;
+        a{
+            color: #fff;
+            text-transform: uppercase;
+        }
+    }
+}
+    // End of footer section
 
 
 
