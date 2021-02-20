@@ -84,6 +84,81 @@ section{
     padding: 0.5rem 2.5rem;
 
 }
+// Burger hideMenu
+.overlay {
+    display: block;
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: $VeryDarkBlue, $alpha: 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        text-transform: uppercase;
+        color: #fff;
+        border-top: 1px solid rgba(216, 216, 216, 0.233);
+        width:85%;
+        margin:0 auto;
+        display: block;
+        transition: 0.3s;
+      } 
+    button{
+        font-size: 25px;
+        text-transform: uppercase;
+          width: 106%;
+          transform: translateX(-10px);
+          padding: .7rem 0;
+          margin-top: 1.5rem;
+          background:transparent;
+          color:#fff;
+          border: 2px solid #fff;
+          &:hover{
+              background: $SoftRed;
+              border: 2px solid $SoftRed;
+          }
+      }
+      .social{
+        position: relative;
+        bottom: -5%;
+         svg{
+              margin:0 1rem;
+              margin-top: 10rem;
+        }
+      }
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    .hidden-logo{
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+        text-align: left;
+        circle {
+            fill: #fff;
+        }
+        #flag{
+            fill: $VeryDarkBlue;
+        }
+    }
+  }
+
+  .overlay .closebtn {
+    border-top: none;
+    position: absolute;
+    top: -35px;
+    right: 20px;
+    font-size: 40px;
+  }
+// End of Burger hideMenu
 // Simple bookmark section
 .bookmark-row{
     position: relative;
@@ -153,7 +228,6 @@ section{
 }
 .simple-bookmark-svg{
     text-align: center;
-    // order:1;
     padding-top: 5rem;
     position: relative;
 }
@@ -162,7 +236,6 @@ section{
     position: absolute;
     z-index: 10;
     right: 0;
-    // top: 300;
     border-top-left-radius: 7rem;
     border-bottom-left-radius: 7rem;
     padding: 21% 40%;
@@ -304,13 +377,12 @@ input{
     border: none;
     margin-right: 0.7rem;
     &::-webkit-input-placeholder {
-        color: $GrayishBlue; /*Change the placeholder color*/
-        opacity: 0.5; /*Change the opacity between 0 and 1*/
+        color: $GrayishBlue;
+        opacity: 0.5;
    }
 }
 .contact{
     padding:5rem;
-    // padding-top:3rem;
     h5{
         margin-bottom:4rem;
         text-transform: uppercase;
@@ -342,8 +414,6 @@ footer{
         margin: 0;
     }
 }
-.footer-logo{
-}
 .white-text{
 fill:#fff;
 }
@@ -367,12 +437,6 @@ fill:#fff;
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
-// .space{
-//     margin:0 2rem;
-// }
-    // End of footer section
-
-
 
 @media screen and (max-width:1024px){
     // Bookmark section
@@ -521,88 +585,4 @@ footer{
         padding:1rem 0;
     }
 }
-
 }
-.overlay {
-    display: block;
-    height: 100%;
-    width: 0%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba($color: $VeryDarkBlue, $alpha: 0.9);
-    overflow-x: hidden;
-    transition: 0.5s;
-    a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 25px;
-        text-transform: uppercase;
-        color: #fff;
-        border-top: 1px solid rgba(216, 216, 216, 0.233);
-        width:85%;
-        margin:0 auto;
-        display: block;
-        transition: 0.3s;
-      } 
-    button{
-        font-size: 25px;
-        text-transform: uppercase;
-          width: 106%;
-          transform: translateX(-10px);
-          padding: .7rem 0;
-          margin-top: 1.5rem;
-          background:transparent;
-          color:#fff;
-          border: 2px solid #fff;
-          &:hover{
-              background: $SoftRed;
-              border: 2px solid $SoftRed;
-          }
-      }
-      .social{
-        position: relative;
-        bottom: -5%;
-         svg{
-              margin:0 1rem;
-              margin-top: 10rem;
-        }
-      }
-  }
-  
-  .overlay-content {
-    position: relative;
-    top: 5%;
-    width: 100%;
-    text-align: center;
-    .hidden-logo{
-        margin-bottom: 2rem;
-        margin-left: 2rem;
-        text-align: left;
-        circle {
-            fill: #fff;
-        }
-        #flag{
-            fill: $VeryDarkBlue;
-        }
-    }
-  }
-
-  .overlay .closebtn {
-    border-top: none;
-    position: absolute;
-    top: -35px;
-    right: 20px;
-    font-size: 40px;
-  }
-  
-//   @media screen and (max-height: 575px) {
-    
-//     .overlay a {font-size: 20px}
-//     .overlay .closebtn {
-//     font-size: 40px;
-//     top: 5px;
-//     right: 35px;
-//     }
-//   }
