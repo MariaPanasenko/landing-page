@@ -12,6 +12,15 @@ $VeryDarkBlue: hsl(229, 31%, 21%);
 a{
     cursor: pointer;
 }
+h2, p{
+    text-align: left;
+}
+h2{
+   color: $VeryDarkBlue;
+}
+p{
+    color: $GrayishBlue;
+}
 body{
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
@@ -27,7 +36,7 @@ nav{
    
 }
 .nav-link{
-    color:#000 !important;
+    color:$VeryDarkBlue !important;
     &:hover{
         color: $SoftRed !important;
     }
@@ -47,15 +56,78 @@ nav{
     }
 }
 // Simple bookmark section
-.row{
+.bookmark-row{
     position: relative;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+    .bookmark-text{
+        order: 2;
+        padding: 7rem 7rem;
+    padding-right: 10rem;
+    margin-top: 5rem;
+    }
+    .bookmark-img{
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+        order: 1;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .round-background-features{
+            position: absolute;
+            left:0;
+            margin-top: 9rem;
+            // padding:5rem 10rem;
+            background:$SoftBlue;
+            border-top-right-radius: 7rem;
+            border-bottom-right-radius: 7rem;
+            padding:12vw 19vw;
+            z-index: 0;
+        }
+        .illustration-features-tab-1, .illustration-features-tab-2{
+            position: relative;
+            z-index: 10;
+            width:85%;
+
+        }
+    }
 }
 .simple-bookmark-text{
+    // order:2;
     padding:10rem;
     text-align: center;
+    button{
+        padding:0.7rem 1rem;
+       
+        font-weight: 500;
+        &:first-of-type{
+            background:$SoftBlue;
+            margin-right:0.5rem;
+            border:2px solid $SoftBlue;
+            &:hover{
+                background:transparent;
+                color: $SoftBlue;
+                border:2px solid $SoftBlue;
+            }
+        }
+        &:last-of-type{
+            box-shadow: 0px 2px 5px rgb(235, 229, 229);
+            background: rgb(245, 245, 245);
+            color:$VeryDarkBlue;
+            border:2px solid  transparent;
+            &:hover{
+                background:transparent;
+                color: $VeryDarkBlue;
+                border:2px solid  $GrayishBlue;
+            }
+        }
+    }
 }
 .simple-bookmark-svg{
-    
+    // order:1;
     padding-top: 5rem;
 }
 .round-background{
@@ -63,13 +135,14 @@ nav{
     position: absolute;
     z-index: 10;
     right: 0;
+    // top: 300;
     border-top-left-radius: 7rem;
     border-bottom-left-radius: 7rem;
-    padding:9rem 19rem;
+    padding:9vw 20vw;
     background: $SoftBlue;
 }
 .bookmark-manager-svg{
-    width:70%;
+    width:35vw;
     height: auto;
     background:rgb(78, 77, 77);
     border: 15px solid rgb(27, 27, 27);
@@ -82,6 +155,111 @@ nav{
         fill: $SoftBlue;
     }
 }
-svg{
-   
+// .nav-tabs > li {
+//     float:none;
+//     display:inline-block;
+//     zoom:1;
+// }
+
+// .nav-tabs {
+//     text-align:center;
+// }
+.nav-tabs{
+    // width:50vw;
+    // margin:0 auto;
+    .nav-item{
+        padding-bottom: 0;
+        
+        .active{
+            border-bottom: 3px solid $SoftRed;
+            color: $VeryDarkBlue !important;
+        }
+    }
+    .nav-link{
+        border:none;
+        color:$GrayishBlue !important;
+    }
+
+    a{
+        text-transform: capitalize;
+    }
+}
+#back{
+    // border-top-right-radius: 2rem;
+    width:370px;
+    // width:365px;
+}
+// Extentions section
+.extention-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.tile{
+    box-shadow: 0px 3px 5px rgb(209, 209, 209);
+    padding: 3.8rem 0;
+    padding-bottom: 1.5rem;
+    width:69%;
+    border-radius:2rem;
+    // position: relative;
+    .dots{
+        // position: absolute;
+        // transform: scale(1.1);
+        // border: 1px solid black;
+        // transform: ;
+    }
+    .extention-description{
+        margin-bottom: 3rem;
+    }
+    button{
+        margin-top: 2rem;
+        padding:1rem 1.5rem;
+        background:$SoftBlue;
+    }
+}
+.extention-description{
+    color: $GrayishBlue;
+    font-size: 80%;
+    margin-bottom: 1.5rem;
+}
+.padding{
+    padding: 0 27rem;
+}
+.chrome{
+    margin-left:5rem;
+}
+.firefox{
+    margin-top: 5rem;
+}
+.opera{
+    margin-top: 10rem;
+}
+
+// FAQ
+
+
+.panel-heading [data-toggle="collapse"]:after {
+    font-family: 'Glyphicons Halflings';
+    content: "\276F"; /* "play" icon */
+    float: right;
+    color: $SoftRed;
+    font-size: 18px;
+    line-height: 22px;
+    /* rotate "play" icon from > (right arrow) to down arrow */
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.panel-heading [data-toggle="collapse"].collapsed:after {
+    /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: #454444;
 }
