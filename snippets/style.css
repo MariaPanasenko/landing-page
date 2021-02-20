@@ -24,6 +24,10 @@ h2, h3 {
   font-size: 30px;
 }
 
+h3, p {
+  margin-bottom: 2rem;
+}
+
 p {
   color: #9194a1;
 }
@@ -34,11 +38,37 @@ body {
 
 nav {
   margin: 0 auto;
-  width: 90%;
+  width: 82%;
 }
 
 section {
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+.blue-btn {
+  background-color: #5368df;
+  border: 2px solid #5368df;
+}
+
+.blue-btn:hover {
+  color: #5368df;
+  background: transparent;
+  border: 2px solid #5368df;
+}
+
+.red-btn {
+  background-color: #fa5757;
+  border: 2px solid #fa5757;
+}
+
+.red-btn:hover {
+  background: #fff;
+  color: #fa5757;
+  border: 2px solid #fa5757;
 }
 
 .nav-item {
@@ -57,17 +87,9 @@ section {
 .nav-btn {
   font-weight: 500;
   text-transform: uppercase;
-  background: #fa5757;
   -webkit-box-shadow: 0px 0px 3px #666;
           box-shadow: 0px 0px 3px #666;
-  border: 2px solid #fa5757;
   padding: 0.5rem 2.5rem;
-}
-
-.nav-btn:hover {
-  color: #fa5757;
-  border: 2px solid #fa5757;
-  background: transparent;
 }
 
 .bookmark-row {
@@ -89,11 +111,9 @@ section {
           order: 2;
   padding: 7rem 7rem;
   padding-right: 10rem;
-  margin-top: 5rem;
 }
 
 .bookmark-row .bookmark-text button {
-  background: #5368df;
   padding: 1rem 2rem;
 }
 
@@ -144,15 +164,7 @@ section {
 }
 
 .simple-bookmark-text button:first-of-type {
-  background: #5368df;
   margin-right: 0.5rem;
-  border: 2px solid #5368df;
-}
-
-.simple-bookmark-text button:first-of-type:hover {
-  background: transparent;
-  color: #5368df;
-  border: 2px solid #5368df;
 }
 
 .simple-bookmark-text button:last-of-type {
@@ -238,8 +250,6 @@ section {
 }
 
 .tile {
-  -webkit-box-shadow: 0px 3px 5px #d1d1d1;
-          box-shadow: 0px 3px 5px #d1d1d1;
   padding: 3.8rem 0;
   padding-bottom: 1.5rem;
   width: 69%;
@@ -247,19 +257,13 @@ section {
 }
 
 .tile .extention-description {
+  color: #9194a1;
+  margin-bottom: 1.5rem;
   margin-bottom: 3rem;
 }
 
 .tile button {
-  margin-top: 2rem;
   padding: 1rem 3rem;
-  background: #5368df;
-}
-
-.extention-description {
-  color: #9194a1;
-  font-size: 80%;
-  margin-bottom: 1.5rem;
 }
 
 .chrome {
@@ -274,11 +278,19 @@ section {
   margin-top: 10rem;
 }
 
+.chrome svg:first-of-type, .firefox svg:first-of-type, .opera svg:first-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.chrome button, .firefox button, .opera button {
+  margin-top: 2rem;
+}
+
 .panel-heading [data-toggle="collapse"].collapsed:after {
   /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
-  color: #454444;
+  color: #5368df;
 }
 
 .panel-heading [data-toggle="collapse"]:after {
@@ -287,33 +299,39 @@ section {
   /* "play" icon */
   float: right;
   color: #fa5757;
-  font-size: 18px;
+  font-size: 30px;
   line-height: 22px;
   /* rotate "play" icon from > (right arrow) to down arrow */
   -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg) translateY(-8px);
+  transform: rotate(-90deg);
 }
 
 .transparent-bg {
-  padding: 10px;
-  background-color: transparent !important;
-  margin: 0 !important;
-  border-left: none !important;
-  border-radius: 0 !important;
-  border-right: none !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  padding: 1.5rem 0;
+  border-top: 1px solid #cecaca;
+}
+
+.transparent-bg a {
+  color: #252b46;
+}
+
+.transparent-bg a:hover {
+  color: #fa5757;
+}
+
+.bottom-line {
+  padding-bottom: 2rem 0;
+  border-bottom: 1px solid #cecaca;
 }
 
 .text-center > button {
   margin-top: 5rem;
   margin-bottom: 7rem;
   padding: 1rem 2rem;
-  background-color: #5368df;
 }
 
 .faq-width {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -371,61 +389,6 @@ footer {
   background: #252b46;
 }
 
-footer .align {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 2rem;
-}
-
-footer .social {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-footer .social a {
-  margin: 0 1.5rem;
-}
-
-footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer ul a {
-  text-decoration: none;
-  color: #252b46;
-  color: #fff;
-}
-
-footer ul li {
-  list-style-type: none;
-  margin: 0 3.5rem;
-  margin-top: 0.45rem;
-}
-
-footer .white-text {
-  fill: #fff !important;
-}
-
-footer .attribution {
-  display: block;
-}
-
 @media screen and (max-width: 1024px) {
   .simple-bookmark-text {
     padding: 2.5rem;
@@ -442,6 +405,18 @@ footer .attribution {
 }
 
 @media screen and (max-width: 768px) {
+  .chrome {
+    margin-left: 0;
+  }
+  .tile {
+    width: 100%;
+  }
+  .tile svg:last-of-type {
+    width: 60%;
+  }
+  .tile button {
+    margin-top: 1rem;
+  }
   .faq-width {
     width: 50%;
     margin: 0 auto;

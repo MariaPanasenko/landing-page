@@ -25,6 +25,9 @@ h2, h3{
    color: $VeryDarkBlue;
    font-size: 30px;
 }
+h3, p{
+    margin-bottom: 2rem;
+}
 p{
     color: $GrayishBlue;
 }
@@ -33,10 +36,31 @@ body{
 }
 nav{
     margin: 0 auto;
-    width: 90%;
+    width: 82%;
 }
 section{
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+}
+.blue-btn{
+    background-color: $SoftBlue;
+    border: 2px solid $SoftBlue;
+    &:hover{
+        color: $SoftBlue;
+        background:transparent;
+        border: 2px solid $SoftBlue;
+    }
+}
+.red-btn{
+    background-color: $SoftRed;
+    border:2px solid $SoftRed;
+    &:hover{
+        background: #fff;
+        color: $SoftRed;
+        border:2px solid $SoftRed;
+    }
 }
 .nav-item{
     text-transform: uppercase;
@@ -53,16 +77,9 @@ section{
 .nav-btn{
     font-weight: 500;
     text-transform: uppercase;
-    background:$SoftRed;
     box-shadow: 0px 0px 3px #666;
-    border:2px solid $SoftRed;
     padding: 0.5rem 2.5rem;
 
-    &:hover{
-        color:$SoftRed;
-        border:2px solid $SoftRed;
-        background: transparent;
-    }
 }
 // Simple bookmark section
 .bookmark-row{
@@ -75,9 +92,7 @@ section{
         order: 2;
         padding: 7rem 7rem;
     padding-right: 10rem;
-    margin-top: 5rem;
     button{
-        background:$SoftBlue;
         padding:1rem 2rem;
     }
     }
@@ -109,7 +124,6 @@ section{
     }
 }
 .simple-bookmark-text{
-    // order:2;
     padding:10rem;
     text-align: center;
     button{
@@ -117,14 +131,8 @@ section{
        
         font-weight: 500;
         &:first-of-type{
-            background:$SoftBlue;
             margin-right:0.5rem;
-            border:2px solid $SoftBlue;
-            &:hover{
-                background:transparent;
-                color: $SoftBlue;
-                border:2px solid $SoftBlue;
-            }
+            
         }
         &:last-of-type{
             box-shadow: 0px 2px 5px rgb(235, 229, 229);
@@ -170,18 +178,7 @@ section{
         fill: $SoftBlue;
     }
 }
-// .nav-tabs > li {
-//     float:none;
-//     display:inline-block;
-//     zoom:1;
-// }
-
-// .nav-tabs {
-//     text-align:center;
-// }
 .nav-tabs{
-    // width:50vw;
-    // margin:0 auto;
     .nav-item{
         padding-bottom: 0;
         
@@ -212,24 +209,20 @@ section{
     text-align: center;
 }
 .tile{
-    box-shadow: 0px 3px 5px rgb(209, 209, 209);
     padding: 3.8rem 0;
     padding-bottom: 1.5rem;
     width:69%;
     border-radius:2rem;
+
     .extention-description{
-        margin-bottom: 3rem;
+    color: $GrayishBlue;
+    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
     }
     button{
-        margin-top: 2rem;
         padding:1rem 3rem;
-        background:$SoftBlue;
+        
     }
-}
-.extention-description{
-    color: $GrayishBlue;
-    font-size: 80%;
-    margin-bottom: 1.5rem;
 }
 .chrome{
     margin-left:5rem;
@@ -240,7 +233,15 @@ section{
 .opera{
     margin-top: 10rem;
 }
-
+.chrome, .firefox, .opera{
+    svg:first-of-type{
+    margin-bottom: 1.5rem;
+    }
+    button{
+        margin-top: 2rem;
+    }
+}
+// End of extention section
 // FAQ
 // Arrow-movement
 .panel-heading [data-toggle="collapse"].collapsed:after {
@@ -250,44 +251,48 @@ section{
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
-    color: #454444;
+    color: $SoftBlue;
 }
 .panel-heading [data-toggle="collapse"]:after {
     font-family: 'Glyphicons Halflings';
     content: "\276F"; /* "play" icon */
     float: right;
     color: $SoftRed;
-    font-size: 18px;
+    font-size: 30px;
     line-height: 22px;
     /* rotate "play" icon from > (right arrow) to down arrow */
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
-    transform: rotate(-90deg) translateY(-8px);
+    transform: rotate(-90deg);
 }
 // End of arrow movement
 //Transparent dropdowns
 .transparent-bg{
-    padding:10px;
-    background-color: transparent !important;
-    margin:0 !important;
-    border-left: none !important;
-    border-radius: 0 !important;
-    border-right: none !important;
-    box-shadow: none !important;
-
+    padding:1.5rem 0;
+    border-top: 1px solid rgb(206, 202, 202);
+    a{
+        color: $VeryDarkBlue;
+        &:hover{
+            color: $SoftRed;
+        }
+    }
 }
+.bottom-line{
+    padding-bottom: 2rem 0;
+        border-bottom: 1px solid rgb(206, 202, 202);
+    }
 .text-center > button{
     margin-top:5rem;
     margin-bottom:7rem;
     padding: 1rem 2rem;
-    background-color:$SoftBlue;
 }
 .faq-width{
-    width:70%;
+    width:50%;
     margin:0 auto;
 }
+// End of Faq section
 // Contact section
 input{
     padding:0.8rem 2rem;
@@ -328,48 +333,18 @@ input{
     align-items: center;
 }
 // End of contact section
-
-footer {
+// Footer section
+footer{
     background:$VeryDarkBlue;
-    .align{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding:2rem;
-    }
-    .social{
-        justify-content: flex-end;
-        a{
-            margin: 0 1.5rem;
-        }
-    }
-    ul{
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        
-        
-    a{
-        text-decoration: none;
-        color:$VeryDarkBlue;
-        color: #fff;
-    }
-    li{
-        list-style-type: none;
-        margin:0 3.5rem;
-        margin-top: 0.45rem;
-    }
 }
-.white-text{
-    fill: #fff !important;
-}
-.attribution{
-    display: block;
-}
-}
+
+
+// End of footer section
+
+
 
 @media screen and (max-width:1024px){
-    // First section
+    // Bookmark section
     .simple-bookmark-text{
         padding:2.5rem;
     }
@@ -381,12 +356,27 @@ footer {
         width:60%;
     }
     }
-    // End of First section
+    // End of Bookmark section
+    
     .tile button{
         font-size: 70%;
     }
 }
 @media screen and (max-width:768px){
+    // Extentions section
+    .chrome{
+        margin-left: 0;
+    }
+    .tile{
+        width:100%;
+        svg:last-of-type{
+            width:60%;
+        }
+        button{
+            margin-top: 1rem;
+        }
+    }
+    // End of Extentions section
     .faq-width{
         width:50%;
         margin:0 auto;
