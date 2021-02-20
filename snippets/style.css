@@ -459,6 +459,16 @@ footer .row {
   .features-section button {
     display: none;
   }
+  .simple-bookmark-text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .simple-bookmark-svg {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
   .illustration-features-tab-1, .illustration-features-tab-2 {
     width: 30%;
   }
@@ -556,8 +566,9 @@ footer .row {
 }
 
 .overlay {
+  display: block;
   height: 100%;
-  width: 100%;
+  width: 0%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -634,19 +645,8 @@ footer .row {
 .overlay .closebtn {
   border-top: none;
   position: absolute;
-  top: 20px;
-  right: 45px;
+  top: -35px;
+  right: 20px;
   font-size: 40px;
-}
-
-@media screen and (max-height: 575px) {
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
 }
 /*# sourceMappingURL=style.css.map */

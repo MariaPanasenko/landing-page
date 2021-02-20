@@ -41,7 +41,7 @@
         class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-light sticky-top"
       >
         <div class="container-fluid">
-          <a href="#" class="navbar-brand"
+          <a href="#" id="hide-lg" class="navbar-brand"
             ><svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fill-rule="evenodd">
                 <path
@@ -58,16 +58,22 @@
                 </g>
               </g></svg
           ></a>
-          <button class="navbar-toggler" type="button">
-            <!-- <span class="navbar-toggler-icon"></span> -->
+          <button
+            class="navbar-toggler"
+            id="burger"
+            onclick="showMenu()"
+            type="button"
+          >
+            <span
+              ><svg xmlns="http://www.w3.org/2000/svg" width="18" height="15">
+                <path
+                  fill="#242A45"
+                  fill-rule="evenodd"
+                  d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"
+                /></svg
+            ></span>
           </button>
           <div id="myNav" class="overlay">
-            <a
-              href="javascript:void(0)"
-              class="closebtn text-right"
-              onclick="closeNav()"
-              >&times;</a
-            >
             <div class="overlay-content">
               <div class="hidden-logo">
                 <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
@@ -88,6 +94,12 @@
                     </g>
                   </g>
                 </svg>
+                <a
+                  href="javascript:void(0)"
+                  class="closebtn text-right"
+                  onclick="hideMenu()"
+                  >&times;</a
+                >
               </div>
               <a href="#">Features</a>
               <a href="#">Pricing</a>
@@ -1594,5 +1606,17 @@
         </div>
       </div>
     </footer>
+    <script>
+      function showMenu() {
+        document.getElementById("myNav").style.width = "100%";
+        document.getElementById("hide-lg").style.display = "none";
+        document.getElementById("burger").style.display = "none";
+      }
+      function hideMenu() {
+        document.getElementById("myNav").style.width = "0%";
+        document.getElementById("hide-lg").style.display = "block";
+        document.getElementById("burger").style.display = "block";
+      }
+    </script>
   </body>
 </html>

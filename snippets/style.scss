@@ -415,6 +415,13 @@ fill:#fff;
             display: none;
         }
     }
+    .simple-bookmark-text{
+        order:2;
+       }
+       .simple-bookmark-svg{
+           order: 1;
+        
+       }
     .illustration-features-tab-1,.illustration-features-tab-2{
             width:30%;
     }
@@ -517,8 +524,9 @@ footer{
 
 }
 .overlay {
+    display: block;
     height: 100%;
-    width: 100%;
+    width: 0%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -582,19 +590,19 @@ footer{
   }
 
   .overlay .closebtn {
-      border-top: none;
+    border-top: none;
     position: absolute;
-    top: 20px;
-    right: 45px;
+    top: -35px;
+    right: 20px;
     font-size: 40px;
   }
   
-  @media screen and (max-height: 575px) {
+//   @media screen and (max-height: 575px) {
     
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-    }
-  }
+//     .overlay a {font-size: 20px}
+//     .overlay .closebtn {
+//     font-size: 40px;
+//     top: 5px;
+//     right: 35px;
+//     }
+//   }
