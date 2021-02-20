@@ -399,7 +399,7 @@ footer .row {
   margin: 0;
 }
 
-.footer-logo .white-text {
+.white-text {
   fill: #fff;
 }
 
@@ -552,6 +552,101 @@ footer .row {
   }
   footer li {
     padding: 1rem 0;
+  }
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(37, 43, 70, 0.9);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #fff;
+  border-top: 1px solid rgba(216, 216, 216, 0.233);
+  width: 85%;
+  margin: 0 auto;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.overlay button {
+  font-size: 25px;
+  text-transform: uppercase;
+  width: 106%;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  padding: .7rem 0;
+  margin-top: 1.5rem;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.overlay button:hover {
+  background: #fa5757;
+  border: 2px solid #fa5757;
+}
+
+.overlay .social {
+  position: relative;
+  bottom: -5%;
+}
+
+.overlay .social svg {
+  margin: 0 1rem;
+  margin-top: 10rem;
+}
+
+.overlay-content {
+  position: relative;
+  top: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay-content .hidden-logo {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.overlay-content .hidden-logo circle {
+  fill: #fff;
+}
+
+.overlay-content .hidden-logo #flag {
+  fill: #252b46;
+}
+
+.overlay .closebtn {
+  border-top: none;
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 40px;
+}
+
+@media screen and (max-height: 575px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
 /*# sourceMappingURL=style.css.map */

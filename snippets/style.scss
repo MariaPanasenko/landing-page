@@ -343,9 +343,9 @@ footer{
     }
 }
 .footer-logo{
-    .white-text{
-    fill:#fff;
-    }
+}
+.white-text{
+fill:#fff;
 }
 .ul-footer{
     li{
@@ -515,6 +515,86 @@ footer{
     }
 }
 
-
-
 }
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: $VeryDarkBlue, $alpha: 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        text-transform: uppercase;
+        color: #fff;
+        border-top: 1px solid rgba(216, 216, 216, 0.233);
+        width:85%;
+        margin:0 auto;
+        display: block;
+        transition: 0.3s;
+      } 
+    button{
+        font-size: 25px;
+        text-transform: uppercase;
+          width: 106%;
+          transform: translateX(-10px);
+          padding: .7rem 0;
+          margin-top: 1.5rem;
+          background:transparent;
+          color:#fff;
+          border: 2px solid #fff;
+          &:hover{
+              background: $SoftRed;
+              border: 2px solid $SoftRed;
+          }
+      }
+      .social{
+        position: relative;
+        bottom: -5%;
+         svg{
+              margin:0 1rem;
+              margin-top: 10rem;
+        }
+      }
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    .hidden-logo{
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+        text-align: left;
+        circle {
+            fill: #fff;
+        }
+        #flag{
+            fill: $VeryDarkBlue;
+        }
+    }
+  }
+
+  .overlay .closebtn {
+      border-top: none;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 40px;
+  }
+  
+  @media screen and (max-height: 575px) {
+    
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
