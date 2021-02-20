@@ -3,18 +3,25 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Rubik', sans-serif !important;
 }
 
 a {
   cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
 
 h2, p {
   text-align: left;
 }
 
-h2 {
+h2, h3 {
   color: #252b46;
+  font-size: 30px;
 }
 
 p {
@@ -22,13 +29,7 @@ p {
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
   font-size: 18px;
-}
-
-nav {
-  margin: 0 auto;
-  width: 90%;
 }
 
 .nav-item {
@@ -234,7 +235,7 @@ nav {
 
 .tile button {
   margin-top: 2rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem 3rem;
   background: #5368df;
 }
 
@@ -242,10 +243,6 @@ nav {
   color: #9194a1;
   font-size: 80%;
   margin-bottom: 1.5rem;
-}
-
-.padding {
-  padding: 0 27rem;
 }
 
 .chrome {
@@ -260,6 +257,13 @@ nav {
   margin-top: 10rem;
 }
 
+.panel-heading [data-toggle="collapse"].collapsed:after {
+  /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  color: #454444;
+}
+
 .panel-heading [data-toggle="collapse"]:after {
   font-family: 'Glyphicons Halflings';
   content: "\276F";
@@ -270,13 +274,151 @@ nav {
   line-height: 22px;
   /* rotate "play" icon from > (right arrow) to down arrow */
   -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateY(-8px);
 }
 
-.panel-heading [data-toggle="collapse"].collapsed:after {
-  /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  color: #454444;
+.transparent-bg {
+  padding: 10px;
+  background-color: transparent !important;
+  margin: 0 !important;
+  border-left: none !important;
+  border-radius: 0 !important;
+  border-right: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.text-center > button {
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+  padding: 1rem 2rem;
+  background-color: #5368df;
+}
+
+.faq-width {
+  width: 70%;
+  margin: 0 auto;
+}
+
+input {
+  padding: 0.8rem 2rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  margin-right: 0.7rem;
+}
+
+input::-webkit-input-placeholder {
+  color: #9194a1;
+  /*Change the placeholder color*/
+  opacity: 0.5;
+  /*Change the opacity between 0 and 1*/
+}
+
+.contact {
+  padding: 5rem;
+  background: #5368df;
+  color: #fff;
+}
+
+.contact h5 {
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .5rem;
+}
+
+.contact h3 {
+  margin-bottom: 4rem;
+  color: #fff;
+}
+
+.contact button {
+  background-color: #fa5757;
+  padding: 1rem 2rem;
+}
+
+.contact-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer {
+  background: #252b46;
+}
+
+footer .align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+footer .social {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer .social a {
+  margin: 0 1.5rem;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: #252b46;
+  color: #fff;
+}
+
+footer ul li {
+  list-style-type: none;
+  margin: 0 3.5rem;
+  margin-top: 0.45rem;
+}
+
+footer .white-text {
+  fill: #fff !important;
+}
+
+footer .attribution {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  .tile button {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faq-width {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
